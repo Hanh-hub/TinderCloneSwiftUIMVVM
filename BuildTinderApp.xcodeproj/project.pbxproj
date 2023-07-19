@@ -14,6 +14,8 @@
 		FD32E1F82A6791B500F85FCE /* BuildTinderAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD32E1F72A6791B500F85FCE /* BuildTinderAppTests.swift */; };
 		FD32E2022A6791B500F85FCE /* BuildTinderAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD32E2012A6791B500F85FCE /* BuildTinderAppUITests.swift */; };
 		FD32E2042A6791B500F85FCE /* BuildTinderAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD32E2032A6791B500F85FCE /* BuildTinderAppUITestsLaunchTests.swift */; };
+		FD32E2142A6795BC00F85FCE /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD32E2132A6795BC00F85FCE /* MainView.swift */; };
+		FD32E2162A67AF5900F85FCE /* TabBarButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD32E2152A67AF5900F85FCE /* TabBarButtonView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +46,8 @@
 		FD32E1FD2A6791B500F85FCE /* BuildTinderAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BuildTinderAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD32E2012A6791B500F85FCE /* BuildTinderAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuildTinderAppUITests.swift; sourceTree = "<group>"; };
 		FD32E2032A6791B500F85FCE /* BuildTinderAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuildTinderAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		FD32E2132A6795BC00F85FCE /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		FD32E2152A67AF5900F85FCE /* TabBarButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarButtonView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,8 +98,10 @@
 		FD32E1E52A6791B200F85FCE /* BuildTinderApp */ = {
 			isa = PBXGroup;
 			children = (
+				FD32E2122A6795AE00F85FCE /* ViewMofrl */,
+				FD32E2112A6795AB00F85FCE /* Model */,
+				FD32E2102A67959600F85FCE /* View */,
 				FD32E1E62A6791B200F85FCE /* BuildTinderAppApp.swift */,
-				FD32E1E82A6791B200F85FCE /* ContentView.swift */,
 				FD32E1EA2A6791B500F85FCE /* Assets.xcassets */,
 				FD32E1EC2A6791B500F85FCE /* Preview Content */,
 			);
@@ -125,6 +131,30 @@
 				FD32E2032A6791B500F85FCE /* BuildTinderAppUITestsLaunchTests.swift */,
 			);
 			path = BuildTinderAppUITests;
+			sourceTree = "<group>";
+		};
+		FD32E2102A67959600F85FCE /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FD32E1E82A6791B200F85FCE /* ContentView.swift */,
+				FD32E2132A6795BC00F85FCE /* MainView.swift */,
+				FD32E2152A67AF5900F85FCE /* TabBarButtonView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		FD32E2112A6795AB00F85FCE /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		FD32E2122A6795AE00F85FCE /* ViewMofrl */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewMofrl;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -257,7 +287,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FD32E2162A67AF5900F85FCE /* TabBarButtonView.swift in Sources */,
 				FD32E1E92A6791B200F85FCE /* ContentView.swift in Sources */,
+				FD32E2142A6795BC00F85FCE /* MainView.swift in Sources */,
 				FD32E1E72A6791B200F85FCE /* BuildTinderAppApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
