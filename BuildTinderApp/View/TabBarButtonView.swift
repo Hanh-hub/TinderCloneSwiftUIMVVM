@@ -7,29 +7,24 @@
 
 import SwiftUI
 
-enum TabVarButtonType: String {
-    case fire = "flame.fill"
-    case likes = "sparkle"
-    case profile  = "person.fill"
-    case message = "message.fill"
-}
 
 struct TabBarButtonView: View {
     var type: TabVarButtonType
-    var action: () -> Void
+    @EnvironmentObject var appState: AppStateManager
     var body: some View {
-        Button(action: {action()}) {
+        Button(action: {appState.selectedTab = type}) {
             Image(systemName: type.rawValue)
                 .resizable()
                 .aspectRatio(contentMode: .fit)
                 .foregroundColor(.gray.opacity(0.5))
         }
+        .frame(height: 32)
     }
 }
 
 
 struct TabBarButtonView_Previews: PreviewProvider {
     static var previews: some View {
-        TabBarButtonView(type: .fire, action: {})
+        TabBarButtonView(type: .fire)
     }
 }

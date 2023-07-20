@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct MainView: View {
+    @EnvironmentObject var appState: AppStateManager
+    
     var body: some View {
         ZStack{
             Color(.systemGray6)
@@ -17,17 +19,18 @@ struct MainView: View {
             VStack {
                 Spacer()
                 HStack {
-                    
-                    TabBarButtonView(type: .fire, action: {})
-                    TabBarButtonView(type: .likes, action: {})
-                    TabBarButtonView(type: .message, action: {})
-                    TabBarButtonView(type: .profile, action: {})
-                  
+                    Spacer()
+                    TabBarButtonView(type: .fire)
+                    Spacer()
+                    TabBarButtonView(type: .likes)
+                    Spacer()
+                    TabBarButtonView(type: .message)
+                    Spacer()
+                    TabBarButtonView(type: .profile)
+                    Spacer()
                 }
                 .frame(height: 100)
             }
-
-            
         }
     }
 }
@@ -35,6 +38,7 @@ struct MainView: View {
 struct MainView_Previews: PreviewProvider {
     static var previews: some View {
         MainView()
+            .environmentObject(AppStateManager())
     }
 }
 
