@@ -118,7 +118,7 @@ struct ProfileView: View {
             
             ProfileSwipePromo()
                 .background(.gray.opacity(0.45))
-                .padding(.bottom, 10)
+                .padding(.bottom, 15)
         }
     }
 }
