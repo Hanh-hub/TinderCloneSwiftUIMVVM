@@ -8,7 +8,6 @@
 import SwiftUI
 
 
-
 struct MainView2: View {
     @EnvironmentObject var appState: AppStateManager
 

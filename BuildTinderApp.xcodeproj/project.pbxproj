@@ -28,6 +28,9 @@
 		FD32E2252A6871C000F85FCE /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD32E2242A6871C000F85FCE /* ProfileView.swift */; };
 		FD32E2282A68765D00F85FCE /* RoundedImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD32E2272A68765D00F85FCE /* RoundedImage.swift */; };
 		FD9E86A12A69B4E900F8656E /* ProfileSwipePromo.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD9E86A02A69B4E900F8656E /* ProfileSwipePromo.swift */; };
+		FD9E86A32A69D40F00F8656E /* MessageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD9E86A22A69D40F00F8656E /* MessageModel.swift */; };
+		FD9E86A52A69D5FF00F8656E /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD9E86A42A69D5FF00F8656E /* UserModel.swift */; };
+		FD9E86A72A6AD52200F8656E /* MessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD9E86A62A6AD52200F8656E /* MessageView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,6 +80,9 @@
 		FD32E2242A6871C000F85FCE /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		FD32E2272A68765D00F85FCE /* RoundedImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedImage.swift; sourceTree = "<group>"; };
 		FD9E86A02A69B4E900F8656E /* ProfileSwipePromo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileSwipePromo.swift; sourceTree = "<group>"; };
+		FD9E86A22A69D40F00F8656E /* MessageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageModel.swift; sourceTree = "<group>"; };
+		FD9E86A42A69D5FF00F8656E /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
+		FD9E86A62A6AD52200F8656E /* MessageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageView.swift; sourceTree = "<group>"; };
 		FE464903C5EE2FC20231C37E /* Pods_BuildTinderApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BuildTinderApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -195,6 +201,7 @@
 		FD32E2102A67959600F85FCE /* View */ = {
 			isa = PBXGroup;
 			children = (
+				FD9E86A82A6AD6E000F8656E /* Message */,
 				FD32E2292A687B2900F85FCE /* HelperView */,
 				FD32E2262A68764700F85FCE /* ProfileView */,
 				FD32E1E82A6791B200F85FCE /* ContentView.swift */,
@@ -209,6 +216,8 @@
 		FD32E2112A6795AB00F85FCE /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				FD9E86A22A69D40F00F8656E /* MessageModel.swift */,
+				FD9E86A42A69D5FF00F8656E /* UserModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -246,6 +255,14 @@
 				FD32E2272A68765D00F85FCE /* RoundedImage.swift */,
 			);
 			path = HelperView;
+			sourceTree = "<group>";
+		};
+		FD9E86A82A6AD6E000F8656E /* Message */ = {
+			isa = PBXGroup;
+			children = (
+				FD9E86A62A6AD52200F8656E /* MessageView.swift */,
+			);
+			path = Message;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -459,9 +476,12 @@
 				FD32E21C2A684E4800F85FCE /* AppStateMananger.swift in Sources */,
 				FD32E2142A6795BC00F85FCE /* MainView.swift in Sources */,
 				FD32E1E72A6791B200F85FCE /* BuildTinderAppApp.swift in Sources */,
+				FD9E86A32A69D40F00F8656E /* MessageModel.swift in Sources */,
 				FD9E86A12A69B4E900F8656E /* ProfileSwipePromo.swift in Sources */,
 				FD32E2282A68765D00F85FCE /* RoundedImage.swift in Sources */,
+				FD9E86A72A6AD52200F8656E /* MessageView.swift in Sources */,
 				FD32E2232A686B5C00F85FCE /* MainViewDemo3.swift in Sources */,
+				FD9E86A52A69D5FF00F8656E /* UserModel.swift in Sources */,
 				FD32E2212A685AD400F85FCE /* MainViewDemo.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
