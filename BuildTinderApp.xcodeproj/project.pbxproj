@@ -19,12 +19,10 @@
 		FD32E1F82A6791B500F85FCE /* BuildTinderAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD32E1F72A6791B500F85FCE /* BuildTinderAppTests.swift */; };
 		FD32E2022A6791B500F85FCE /* BuildTinderAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD32E2012A6791B500F85FCE /* BuildTinderAppUITests.swift */; };
 		FD32E2042A6791B500F85FCE /* BuildTinderAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD32E2032A6791B500F85FCE /* BuildTinderAppUITestsLaunchTests.swift */; };
-		FD32E2142A6795BC00F85FCE /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD32E2132A6795BC00F85FCE /* MainView.swift */; };
 		FD32E2162A67AF5900F85FCE /* TabBarButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD32E2152A67AF5900F85FCE /* TabBarButtonView.swift */; };
 		FD32E21C2A684E4800F85FCE /* AppStateMananger.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD32E21B2A684E4800F85FCE /* AppStateMananger.swift */; };
 		FD32E21F2A68544500F85FCE /* CustomEnums.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD32E21E2A68544500F85FCE /* CustomEnums.swift */; };
-		FD32E2212A685AD400F85FCE /* MainViewDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD32E2202A685AD400F85FCE /* MainViewDemo.swift */; };
-		FD32E2232A686B5C00F85FCE /* MainViewDemo3.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD32E2222A686B5C00F85FCE /* MainViewDemo3.swift */; };
+		FD32E2212A685AD400F85FCE /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD32E2202A685AD400F85FCE /* MainView.swift */; };
 		FD32E2252A6871C000F85FCE /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD32E2242A6871C000F85FCE /* ProfileView.swift */; };
 		FD32E2282A68765D00F85FCE /* RoundedImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD32E2272A68765D00F85FCE /* RoundedImage.swift */; };
 		FD467B472A6E333200F01F47 /* MessageListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD467B462A6E333200F01F47 /* MessageListViewModel.swift */; };
@@ -78,12 +76,10 @@
 		FD32E1FD2A6791B500F85FCE /* BuildTinderAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BuildTinderAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD32E2012A6791B500F85FCE /* BuildTinderAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuildTinderAppUITests.swift; sourceTree = "<group>"; };
 		FD32E2032A6791B500F85FCE /* BuildTinderAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuildTinderAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		FD32E2132A6795BC00F85FCE /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		FD32E2152A67AF5900F85FCE /* TabBarButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarButtonView.swift; sourceTree = "<group>"; };
 		FD32E21B2A684E4800F85FCE /* AppStateMananger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStateMananger.swift; sourceTree = "<group>"; };
 		FD32E21E2A68544500F85FCE /* CustomEnums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomEnums.swift; sourceTree = "<group>"; };
-		FD32E2202A685AD400F85FCE /* MainViewDemo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewDemo.swift; sourceTree = "<group>"; };
-		FD32E2222A686B5C00F85FCE /* MainViewDemo3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewDemo3.swift; sourceTree = "<group>"; };
+		FD32E2202A685AD400F85FCE /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		FD32E2242A6871C000F85FCE /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		FD32E2272A68765D00F85FCE /* RoundedImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedImage.swift; sourceTree = "<group>"; };
 		FD467B462A6E333200F01F47 /* MessageListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageListViewModel.swift; sourceTree = "<group>"; };
@@ -215,14 +211,13 @@
 		FD32E2102A67959600F85FCE /* View */ = {
 			isa = PBXGroup;
 			children = (
+				FD467B4E2A702E9200F01F47 /* LikesView */,
 				FD9E86A82A6AD6E000F8656E /* Message */,
 				FD32E2292A687B2900F85FCE /* HelperView */,
 				FD32E2262A68764700F85FCE /* ProfileView */,
 				FD32E1E82A6791B200F85FCE /* ContentView.swift */,
-				FD32E2132A6795BC00F85FCE /* MainView.swift */,
 				FD32E2152A67AF5900F85FCE /* TabBarButtonView.swift */,
-				FD32E2202A685AD400F85FCE /* MainViewDemo.swift */,
-				FD32E2222A686B5C00F85FCE /* MainViewDemo3.swift */,
+				FD32E2202A685AD400F85FCE /* MainView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -272,6 +267,13 @@
 				FD32E2272A68765D00F85FCE /* RoundedImage.swift */,
 			);
 			path = HelperView;
+			sourceTree = "<group>";
+		};
+		FD467B4E2A702E9200F01F47 /* LikesView */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = LikesView;
 			sourceTree = "<group>";
 		};
 		FD9E86A82A6AD6E000F8656E /* Message */ = {
@@ -501,16 +503,14 @@
 				FD9E86AA2A6B30F100F8656E /* ChatViewModel.swift in Sources */,
 				FD9E86AE2A6B4D7F00F8656E /* ChatViewHeader.swift in Sources */,
 				FD32E21C2A684E4800F85FCE /* AppStateMananger.swift in Sources */,
-				FD32E2142A6795BC00F85FCE /* MainView.swift in Sources */,
 				FD467B4D2A6EEA3C00F01F47 /* ViewModifiers.swift in Sources */,
 				FD32E1E72A6791B200F85FCE /* BuildTinderAppApp.swift in Sources */,
 				FD9E86A32A69D40F00F8656E /* MessageModel.swift in Sources */,
 				FD9E86A12A69B4E900F8656E /* ProfileSwipePromo.swift in Sources */,
 				FD32E2282A68765D00F85FCE /* RoundedImage.swift in Sources */,
 				FD9E86A72A6AD52200F8656E /* MessageView.swift in Sources */,
-				FD32E2232A686B5C00F85FCE /* MainViewDemo3.swift in Sources */,
 				FD9E86A52A69D5FF00F8656E /* UserModel.swift in Sources */,
-				FD32E2212A685AD400F85FCE /* MainViewDemo.swift in Sources */,
+				FD32E2212A685AD400F85FCE /* MainView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

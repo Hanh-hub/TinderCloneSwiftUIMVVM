@@ -1,44 +1,59 @@
 //
-//  MainView.swift
+//  MainViewDemo.swift
 //  BuildTinderApp
 //
-//  Created by Hanh Vo on 7/18/23.
+//  Created by Hanh Vo on 7/19/23.
 //
 
 import SwiftUI
 
+
 struct MainView: View {
     @EnvironmentObject var appState: AppStateManager
     
+
     var body: some View {
-        ZStack{
-            Color(.systemGray6)
-                .opacity(0.5)
-                .ignoresSafeArea(.all, edges: .all)
-          
-            VStack {
-                Spacer()
-                HStack {
-                    Spacer()
-                    TabBarButtonView(type: .fire)
-                    Spacer()
-                    TabBarButtonView(type: .likes)
-                    Spacer()
-                    TabBarButtonView(type: .message)
-                    Spacer()
-                    TabBarButtonView(type: .profile)
-                    Spacer()
-                }
-                .frame(height: 100)
+        
+        NavigationView {
+            TabView(selection: $appState.selectedTab) {
+                Text("fire view")
+                    .tabItem {
+                        Image(systemName: "flame")
+                        Text("Fire")
+                    }
+                    .tag(TabVarButtonType.fire)
+
+                Text("likes")
+                    .tabItem {
+                        Image(systemName: "sparkle")
+                        Text("Likes")
+                    }
+                    .tag(TabVarButtonType.likes)
+
+                MessageListView()
+                    .tabItem {
+                        Image(systemName: "message")
+                        Text("Messages")
+                    }
+                    .tag(TabVarButtonType.message)
+
+                ProfileView()
+                    .tabItem {
+                        Image(systemName: "person")
+                        Text("Profile")
+                    }
+                    .tag(TabVarButtonType.profile)
             }
+            .tint(appState.selectedTab == .likes ? .yellow : .red)
         }
+       // .modifier(HideNavigationView())
+        
     }
 }
 
-struct MainView_Previews: PreviewProvider {
+struct MainViewDemo_Previews: PreviewProvider {
     static var previews: some View {
         MainView()
             .environmentObject(AppStateManager())
     }
 }
-
