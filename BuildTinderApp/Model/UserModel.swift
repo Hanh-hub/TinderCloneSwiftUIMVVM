@@ -20,6 +20,16 @@ extension Person {
 }
 
 
+struct User {
+    let name: String
+    let goldSubscription: Bool
+}
+
+extension User {
+    static let example = User(name: "Kevin", goldSubscription: true)
+    static let example2 = User(name: "Julliana", goldSubscription: false)
+}
+
 
 //struct User {
 //    var id: String
