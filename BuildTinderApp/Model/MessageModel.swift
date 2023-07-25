@@ -8,7 +8,8 @@
 import Foundation
 
 
-struct Message {
+struct Message: Identifiable {
+    var id = UUID()
     var content: String
     var senderName: String? = nil
     
@@ -22,13 +23,21 @@ extension Message {
     static let exampleReceived = Message(content: "I am fine. How are you?", senderName: "Stephen")
 }
 
-struct MessagePreview {
+struct MessagePreview: Identifiable {
+    var id = UUID()
     var person: Person
     var lastMessage: String
 }
+
 extension MessagePreview {
-    static let example = MessagePreview(person: Person.example, lastMessage: "Hello there!")
+    static let example = MessagePreview(person: Person.example, lastMessage: "Hello there. How are you doing today? How's the weather where you live right now?")
+    
+    static let examples: [MessagePreview] = [
+        MessagePreview(person: Person.example, lastMessage: "Hello there. How are you doing today? How's the weather where you live right now?"),
+        MessagePreview(person: Person.example2, lastMessage: "Hi there")
+    ]
 }
+
 
 //struct Message2 {
 //    var id: String

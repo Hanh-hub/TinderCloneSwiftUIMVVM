@@ -11,11 +11,12 @@ import Foundation
 struct Person {
     var name: String
     var imageURLS: [URL]
+    var bio: String
 }
 
 extension Person {
-    static let example = Person(name: "Hannah", imageURLS: [URL(string: "https://picsum.photos/400/300")!])
-    
+    static let example = Person(name: "Hannah", imageURLS: [URL(string: "https://picsum.photos/400/300")!], bio: "I love dogs and outdoor stuff")
+    static let example2 = Person(name: "Julian", imageURLS: [URL(string: "https://picsum.photos/400/300")!], bio: "Looking for friends. I like working out")
 }
 //struct User {
 //    var id: String

@@ -12,36 +12,40 @@ struct MainView2: View {
     @EnvironmentObject var appState: AppStateManager
 
     var body: some View {
-        TabView(selection: $appState.selectedTab) {
-            Text("fire view")
-                .tabItem {
-                    Image(systemName: "flame")
-                    Text("Fire")
-                }
-                .tag(TabVarButtonType.fire)
+        
+        NavigationView {
+            TabView(selection: $appState.selectedTab) {
+                Text("fire view")
+                    .tabItem {
+                        Image(systemName: "flame")
+                        Text("Fire")
+                    }
+                    .tag(TabVarButtonType.fire)
 
-            Text("likes")
-                .tabItem {
-                    Image(systemName: "sparkle")
-                    Text("Likes")
-                }
-                .tag(TabVarButtonType.likes)
+                Text("likes")
+                    .tabItem {
+                        Image(systemName: "sparkle")
+                        Text("Likes")
+                    }
+                    .tag(TabVarButtonType.likes)
 
-            Text("message")
-                .tabItem {
-                    Image(systemName: "message")
-                    Text("Messages")
-                }
-                .tag(TabVarButtonType.message)
+                MessageListView()
+                    .tabItem {
+                        Image(systemName: "message")
+                        Text("Messages")
+                    }
+                    .tag(TabVarButtonType.message)
 
-            ProfileView()
-                .tabItem {
-                    Image(systemName: "person")
-                    Text("Profile")
-                }
-                .tag(TabVarButtonType.profile)
+                ProfileView()
+                    .tabItem {
+                        Image(systemName: "person")
+                        Text("Profile")
+                    }
+                    .tag(TabVarButtonType.profile)
+            }
+            .tint(appState.selectedTab == .likes ? .yellow : .red)
         }
-        .tint(appState.selectedTab == .likes ? .yellow : .red)
+       // .modifier(HideNavigationView())
         
     }
 }
