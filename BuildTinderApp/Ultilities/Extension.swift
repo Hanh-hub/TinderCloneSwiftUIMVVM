@@ -31,3 +31,11 @@ extension CGFloat {
         return basePadding + CGFloat(1 * text.count)
     }
 }
+
+extension String {
+    static func formatCurrency(value: Double) -> String {
+        let formatter = NumberFormatter()
+        formatter.numberStyle = .currency
+        return formatter.string(from: NSNumber(value: value)) ?? "\(value)"
+    }
+}

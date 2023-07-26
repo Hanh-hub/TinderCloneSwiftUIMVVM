@@ -9,7 +9,7 @@ import Foundation
 
 
 class UserViewModel: ObservableObject {
-    @Published var currentUser: User = User(name: "", goldSubscription: false)
+    @Published var currentUser: User = User(name: "", age: 25, goldSubscription: false)
     @Published var matches: [Person] = []
     @Published var topPick: [Person] = []
     

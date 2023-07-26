@@ -23,8 +23,8 @@ struct ProfileSwipePromo: View {
         PromoTabContent(tabTitle: "Upgrade to Tinder Platinum", buttonTitle: "Get Tinder Platinum", description: "Level Up every Action You Take on Tinder", color: .black)
     ]
     
+    var purchaseAction: () -> Void
 
-    
     var body: some View {
         GeometryReader {geometry in
             VStack(spacing: 0){
@@ -52,10 +52,11 @@ struct ProfileSwipePromo: View {
                 .onReceive(timer) { _ in
                     currentTab = (currentTab + 1) % tabs.count
                 }
+                .animation(.easeIn(duration: 0.25), value: currentTab)
                
                 
                 Button {
-                    
+                    purchaseAction()
                 } label: {
                     Text(tabs[currentTab].buttonTitle)
                         .padding(.vertical,20 )
@@ -78,7 +79,7 @@ struct ProfileSwipePromo_Previews: PreviewProvider {
     static var previews: some View {
         ZStack{
             Color.gray.opacity(0.6)
-            ProfileSwipePromo()
+            ProfileSwipePromo(purchaseAction: {})
         }
         .frame(height: 400)
         

@@ -36,12 +36,13 @@ extension Person {
 
 struct User {
     let name: String
+    var age: Int
     let goldSubscription: Bool
 }
 
 extension User {
-    static let example = User(name: "Kevin", goldSubscription: false)
-    static let example2 = User(name: "Julliana", goldSubscription: true)
+    static let example = User(name: "Kevin",age: 26, goldSubscription: false)
+    static let example2 = User(name: "Julliana",age: 54, goldSubscription: true)
 }
 
 

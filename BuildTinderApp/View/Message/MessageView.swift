@@ -14,10 +14,10 @@ struct RoundedCorners: Shape {
     func path(in rect: CGRect) -> Path {
         var path = Path()
         //radius of 4 corners's cirlce
-        var topLeft = CGPoint(x: rect.minX + radius, y: rect.minY + radius)
-        var topRight = CGPoint(x: rect.maxX - radius, y: rect.minY + radius)
-        var bottomLeft = CGPoint(x: rect.minX + radius, y: rect.maxY - radius)
-        var bottomRight = CGPoint(x: rect.maxX - radius, y: rect.maxY - radius)
+        let topLeft = CGPoint(x: rect.minX + radius, y: rect.minY + radius)
+        let topRight = CGPoint(x: rect.maxX - radius, y: rect.minY + radius)
+        let bottomLeft = CGPoint(x: rect.minX + radius, y: rect.maxY - radius)
+        let bottomRight = CGPoint(x: rect.maxX - radius, y: rect.maxY - radius)
         
         //starting point at top left
         path.move(to: CGPoint(x: rect.minX, y: rect.minY))
