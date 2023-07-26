@@ -29,6 +29,11 @@
 		FD467B492A6EB07900F01F47 /* MessageListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD467B482A6EB07900F01F47 /* MessageListView.swift */; };
 		FD467B4B2A6EDA4300F01F47 /* MessageRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD467B4A2A6EDA4300F01F47 /* MessageRowView.swift */; };
 		FD467B4D2A6EEA3C00F01F47 /* ViewModifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD467B4C2A6EEA3C00F01F47 /* ViewModifiers.swift */; };
+		FD467B502A70316500F01F47 /* LikesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD467B4F2A70316500F01F47 /* LikesView.swift */; };
+		FD467B562A703C1D00F01F47 /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD467B552A703C1D00F01F47 /* UserViewModel.swift */; };
+		FD467B582A70441C00F01F47 /* PersonSquare.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD467B572A70441C00F01F47 /* PersonSquare.swift */; };
+		FD467B5A2A705A2D00F01F47 /* TopPickView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD467B592A705A2D00F01F47 /* TopPickView.swift */; };
+		FD467B5C2A705ADB00F01F47 /* MatchesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD467B5B2A705ADB00F01F47 /* MatchesView.swift */; };
 		FD9E86A12A69B4E900F8656E /* ProfileSwipePromo.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD9E86A02A69B4E900F8656E /* ProfileSwipePromo.swift */; };
 		FD9E86A32A69D40F00F8656E /* MessageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD9E86A22A69D40F00F8656E /* MessageModel.swift */; };
 		FD9E86A52A69D5FF00F8656E /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD9E86A42A69D5FF00F8656E /* UserModel.swift */; };
@@ -86,6 +91,11 @@
 		FD467B482A6EB07900F01F47 /* MessageListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageListView.swift; sourceTree = "<group>"; };
 		FD467B4A2A6EDA4300F01F47 /* MessageRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageRowView.swift; sourceTree = "<group>"; };
 		FD467B4C2A6EEA3C00F01F47 /* ViewModifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModifiers.swift; sourceTree = "<group>"; };
+		FD467B4F2A70316500F01F47 /* LikesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikesView.swift; sourceTree = "<group>"; };
+		FD467B552A703C1D00F01F47 /* UserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
+		FD467B572A70441C00F01F47 /* PersonSquare.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonSquare.swift; sourceTree = "<group>"; };
+		FD467B592A705A2D00F01F47 /* TopPickView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopPickView.swift; sourceTree = "<group>"; };
+		FD467B5B2A705ADB00F01F47 /* MatchesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchesView.swift; sourceTree = "<group>"; };
 		FD9E86A02A69B4E900F8656E /* ProfileSwipePromo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileSwipePromo.swift; sourceTree = "<group>"; };
 		FD9E86A22A69D40F00F8656E /* MessageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageModel.swift; sourceTree = "<group>"; };
 		FD9E86A42A69D5FF00F8656E /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
@@ -211,7 +221,7 @@
 		FD32E2102A67959600F85FCE /* View */ = {
 			isa = PBXGroup;
 			children = (
-				FD467B4E2A702E9200F01F47 /* LikesView */,
+				FD467B4E2A702E9200F01F47 /* MatchView */,
 				FD9E86A82A6AD6E000F8656E /* Message */,
 				FD32E2292A687B2900F85FCE /* HelperView */,
 				FD32E2262A68764700F85FCE /* ProfileView */,
@@ -237,6 +247,7 @@
 				FD32E21B2A684E4800F85FCE /* AppStateMananger.swift */,
 				FD467B462A6E333200F01F47 /* MessageListViewModel.swift */,
 				FD9E86A92A6B30F100F8656E /* ChatViewModel.swift */,
+				FD467B552A703C1D00F01F47 /* UserViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -269,11 +280,15 @@
 			path = HelperView;
 			sourceTree = "<group>";
 		};
-		FD467B4E2A702E9200F01F47 /* LikesView */ = {
+		FD467B4E2A702E9200F01F47 /* MatchView */ = {
 			isa = PBXGroup;
 			children = (
+				FD467B4F2A70316500F01F47 /* LikesView.swift */,
+				FD467B592A705A2D00F01F47 /* TopPickView.swift */,
+				FD467B572A70441C00F01F47 /* PersonSquare.swift */,
+				FD467B5B2A705ADB00F01F47 /* MatchesView.swift */,
 			);
-			path = LikesView;
+			path = MatchView;
 			sourceTree = "<group>";
 		};
 		FD9E86A82A6AD6E000F8656E /* Message */ = {
@@ -492,6 +507,7 @@
 			files = (
 				FD9E86B02A6BAB0700F8656E /* ChatView.swift in Sources */,
 				FD467B492A6EB07900F01F47 /* MessageListView.swift in Sources */,
+				FD467B5C2A705ADB00F01F47 /* MatchesView.swift in Sources */,
 				FD32E2162A67AF5900F85FCE /* TabBarButtonView.swift in Sources */,
 				FD467B4B2A6EDA4300F01F47 /* MessageRowView.swift in Sources */,
 				FD467B472A6E333200F01F47 /* MessageListViewModel.swift in Sources */,
@@ -500,16 +516,20 @@
 				FD32E1E92A6791B200F85FCE /* ContentView.swift in Sources */,
 				FD009FF22A699121008F234E /* ProfileSwipePromo1.swift in Sources */,
 				FD009FF02A689D94008F234E /* Extension.swift in Sources */,
+				FD467B562A703C1D00F01F47 /* UserViewModel.swift in Sources */,
 				FD9E86AA2A6B30F100F8656E /* ChatViewModel.swift in Sources */,
 				FD9E86AE2A6B4D7F00F8656E /* ChatViewHeader.swift in Sources */,
+				FD467B582A70441C00F01F47 /* PersonSquare.swift in Sources */,
 				FD32E21C2A684E4800F85FCE /* AppStateMananger.swift in Sources */,
 				FD467B4D2A6EEA3C00F01F47 /* ViewModifiers.swift in Sources */,
 				FD32E1E72A6791B200F85FCE /* BuildTinderAppApp.swift in Sources */,
 				FD9E86A32A69D40F00F8656E /* MessageModel.swift in Sources */,
 				FD9E86A12A69B4E900F8656E /* ProfileSwipePromo.swift in Sources */,
+				FD467B502A70316500F01F47 /* LikesView.swift in Sources */,
 				FD32E2282A68765D00F85FCE /* RoundedImage.swift in Sources */,
 				FD9E86A72A6AD52200F8656E /* MessageView.swift in Sources */,
 				FD9E86A52A69D5FF00F8656E /* UserModel.swift in Sources */,
+				FD467B5A2A705A2D00F01F47 /* TopPickView.swift in Sources */,
 				FD32E2212A685AD400F85FCE /* MainView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

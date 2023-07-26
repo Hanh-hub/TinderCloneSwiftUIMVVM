@@ -23,7 +23,7 @@ struct MainView: View {
                     }
                     .tag(TabVarButtonType.fire)
 
-                Text("likes")
+                MatchesView()
                     .tabItem {
                         Image(systemName: "sparkle")
                         Text("Likes")
@@ -55,5 +55,6 @@ struct MainViewDemo_Previews: PreviewProvider {
     static var previews: some View {
         MainView()
             .environmentObject(AppStateManager())
+            .environmentObject(UserViewModel())
     }
 }

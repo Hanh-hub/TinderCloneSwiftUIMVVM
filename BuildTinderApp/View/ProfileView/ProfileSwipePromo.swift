@@ -23,10 +23,7 @@ struct ProfileSwipePromo: View {
         PromoTabContent(tabTitle: "Upgrade to Tinder Platinum", buttonTitle: "Get Tinder Platinum", description: "Level Up every Action You Take on Tinder", color: .black)
     ]
     
-    private func calculatePadding(for text: String) -> CGFloat{
-        let basePadding: CGFloat = 20
-        return basePadding + CGFloat(1 * text.count)
-    }
+
     
     var body: some View {
         GeometryReader {geometry in
@@ -62,8 +59,8 @@ struct ProfileSwipePromo: View {
                 } label: {
                     Text(tabs[currentTab].buttonTitle)
                         .padding(.vertical,20 )
-                        .padding(.horizontal, calculatePadding(for: tabs[currentTab].buttonTitle))
-                        .frame(width: geometry.size.width * 0.75)
+                        .padding(.horizontal, CGFloat.calculatePadding(for: tabs[currentTab].buttonTitle))
+                        .frame(width: geometry.size.width * 0.70)
                         .font(.system(size: 20, weight: .bold))
                         .foregroundColor(tabs[currentTab].color)
                         .background(.white)
