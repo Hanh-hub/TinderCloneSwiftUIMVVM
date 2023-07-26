@@ -14,6 +14,7 @@ extension Color {
     static let textTitle = Color.black.opacity(0.8)
     static let defaultBackground = Color(.systemGray6).opacity(0.35)
     static let textfieldBG = Color(.systemGray6)
+    static let goldBG = Color(hue: 0.131, saturation: 0.8, brightness: 0.767)
 }
 
 #if canImport(UIKit)
@@ -23,3 +24,10 @@ extension View {
     }
 }
 #endif
+
+extension CGFloat {
+   static func calculatePadding(for text: String) -> CGFloat{
+        let basePadding: CGFloat = 10
+        return basePadding + CGFloat(1 * text.count)
+    }
+}

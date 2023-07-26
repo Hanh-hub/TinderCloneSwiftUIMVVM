@@ -1,13 +1,14 @@
 //
-//  LikesView.swift
+//  TopPickView.swift
 //  BuildTinderApp
 //
 //  Created by Hanh Vo on 7/25/23.
 //
 
+
 import SwiftUI
 
-struct LikesView: View {
+struct TopPickView: View {
     
     @EnvironmentObject var userViewModel: UserViewModel
     @EnvironmentObject var appStateManager: AppStateManager
@@ -16,15 +17,10 @@ struct LikesView: View {
         return userViewModel.currentUser
     }
     
-    var likesOrTopPicksList: [Person]
-    
-    var description: String = "Upgrade to Gold to see people who already liked you"
-    
-    var blur: Bool  = false
     var body: some View {
         
         ScrollView(.vertical, showsIndicators: true) {
-            Text(description)
+            Text("Upgrade to Gold to see people who already liked you")
                 .font(.system(size: 16, weight: .medium))
                 .foregroundColor(.textTitle)
                 .multilineTextAlignment(.center)
@@ -36,8 +32,8 @@ struct LikesView: View {
             LazyVGrid(columns: [GridItem(.flexible()), GridItem(.flexible())],
                       alignment: .center
             ) {
-                ForEach(likesOrTopPicksList){person in
-                    PersonSquare(person: person, blur: blur)
+                ForEach(userViewModel.matches){match in
+                    PersonSquare(person: match, blur: !userViewModel.currentUser.goldSubscription)
                         .frame(height: 240)
                         .onTapGesture {
                             //personTapped(person)
@@ -59,9 +55,10 @@ struct LikesView: View {
     }
 }
 
-struct LikesView_Previews: PreviewProvider {
+
+struct TopPickView_Previews: PreviewProvider {
     static var previews: some View {
-        LikesView(likesOrTopPicksList: Person.examples)
+        TopPickView()
             .environmentObject(UserViewModel())
             .environmentObject(AppStateManager())
     }

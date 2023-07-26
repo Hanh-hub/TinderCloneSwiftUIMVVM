@@ -8,15 +8,29 @@
 import Foundation
 
 
-struct Person {
+struct Person: Identifiable {
+    var id = UUID()
     var name: String
     var imageURLS: [URL]
     var bio: String
+    var age: Int
 }
 
 extension Person {
-    static let example = Person(name: "Hannah", imageURLS: [URL(string: "https://picsum.photos/400/300")!], bio: "I love dogs and outdoor stuff")
-    static let example2 = Person(name: "Julian", imageURLS: [URL(string: "https://picsum.photos/400/300")!], bio: "Looking for friends. I like working out")
+    static let example = Person(name: "Hannah", imageURLS: [URL(string: "https://picsum.photos/400/300")!], bio: "I love dogs and outdoor stuff", age: 33)
+    static let example2 = Person(name: "Julian", imageURLS: [URL(string: "https://picsum.photos/400/300")!], bio: "Looking for friends. I like working out", age: 24)
+    static let examples: [Person] = [
+        Person(name: "Josh", imageURLS: [URL(string: "https://picsum.photos/400/300")!], bio: "I love dogs and outdoor stuff", age: 33),
+        Person(name: "Chris", imageURLS: [URL(string: "https://picsum.photos/400/300")!], bio: "I love dogs and outdoor stuff", age: 33),
+        Person(name: "Hoang", imageURLS: [URL(string: "https://picsum.photos/400/300")!], bio: "I love dogs and outdoor stuff", age: 33),
+        Person(name: "Stephen", imageURLS: [URL(string: "https://picsum.photos/400/300")!], bio: "I love dogs and outdoor stuff", age: 33),
+        Person(name: "Jimmy", imageURLS: [URL(string: "https://picsum.photos/400/300")!], bio: "I love dogs and outdoor stuff", age: 33),
+        Person(name: "Jungsuk", imageURLS: [URL(string: "https://picsum.photos/400/300")!], bio: "I love dogs and outdoor stuff", age: 33),
+        Person(name: "Sean", imageURLS: [URL(string: "https://picsum.photos/400/300")!], bio: "I love dogs and outdoor stuff", age: 33),
+        Person(name: "Miller", imageURLS: [URL(string: "https://picsum.photos/400/300")!], bio: "I love dogs and outdoor stuff", age: 33),
+        Person(name: "Paul", imageURLS: [URL(string: "https://picsum.photos/400/300")!], bio: "I love dogs and outdoor stuff", age: 33),
+        Person(name: "Linda", imageURLS: [URL(string: "https://picsum.photos/400/300")!], bio: "I love dogs and outdoor stuff", age: 33)
+    ]
 }
 
 
@@ -26,8 +40,8 @@ struct User {
 }
 
 extension User {
-    static let example = User(name: "Kevin", goldSubscription: true)
-    static let example2 = User(name: "Julliana", goldSubscription: false)
+    static let example = User(name: "Kevin", goldSubscription: false)
+    static let example2 = User(name: "Julliana", goldSubscription: true)
 }
 
 
