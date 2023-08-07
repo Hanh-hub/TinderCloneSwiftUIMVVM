@@ -11,13 +11,14 @@ import SwiftUI
 struct MainView: View {
     @EnvironmentObject var appState: AppStateManager
     
-
     var body: some View {
         
         NavigationView {
             ZStack {
                 TabView(selection: $appState.selectedTab) {
-                    Text("fire view")
+                    HomeView()
+                        .padding(.vertical)
+                        .padding(.bottom, 40)
                         .tabItem {
                             Image(systemName: "flame")
                             Text("Fire")
@@ -53,9 +54,9 @@ struct MainView: View {
                         .transition(.offset(y: 800))
                 }
             }
+            .modifier(HideNavigationView())
         }
-       // .modifier(HideNavigationView())
-        
+       
     }
 }
 
