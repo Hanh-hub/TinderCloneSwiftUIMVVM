@@ -8,6 +8,13 @@
 import SwiftUI
 
 struct ProfileView: View {
+    
+    @EnvironmentObject var userMng: UserViewModel
+    @EnvironmentObject var appState: AppStateManager
+    
+    var user: User {
+        return userMng.currentUser
+    }
     var body: some View {
         VStack {
             ZStack(){
@@ -30,7 +37,7 @@ struct ProfileView: View {
          
             Spacer().frame(height: 18)
             
-            Text("Hannah, 26")
+            Text("\(user.name), \(user.age)")
                 .font(.system(size: 26, weight: .medium))
                 .foregroundColor(.textTitle)
             
@@ -116,9 +123,15 @@ struct ProfileView: View {
             .cornerRadius(12)
             .padding(.horizontal )
             
-            ProfileSwipePromo()
-                .background(.gray.opacity(0.45))
-                .padding(.bottom, 15)
+            if !user.goldSubscription {
+                ProfileSwipePromo(purchaseAction: {
+                    appState.showPurchaseScreen()
+                })
+                    .background(.gray.opacity(0.45))
+                    .padding(.bottom, 15)
+            }
+            
+
         }
     }
 }
@@ -127,5 +140,8 @@ struct ProfileView_Previews: PreviewProvider {
     static var previews: some View {
         ProfileView()
             .background(Color.defaultBackground)
+            .environmentObject(UserViewModel())
+            .environmentObject(AppStateManager())
+            
     }
 }

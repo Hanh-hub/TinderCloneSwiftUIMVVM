@@ -14,34 +14,63 @@ struct Person: Identifiable {
     var imageURLS: [URL]
     var bio: String
     var age: Int
+    var jobTitle: String
+    var school: String?
+    var distance: Int
+    var vaccinated: Bool
+    
+    var x: CGFloat = 0.0
+    var y: CGFloat = 0.0
+    var degree: Double = 0.0
 }
 
 extension Person {
-    static let example = Person(name: "Hannah", imageURLS: [URL(string: "https://picsum.photos/400/300")!], bio: "I love dogs and outdoor stuff", age: 33)
-    static let example2 = Person(name: "Julian", imageURLS: [URL(string: "https://picsum.photos/400/300")!], bio: "Looking for friends. I like working out", age: 24)
-    static let examples: [Person] = [
-        Person(name: "Josh", imageURLS: [URL(string: "https://picsum.photos/400/300")!], bio: "I love dogs and outdoor stuff", age: 33),
-        Person(name: "Chris", imageURLS: [URL(string: "https://picsum.photos/400/300")!], bio: "I love dogs and outdoor stuff", age: 33),
-        Person(name: "Hoang", imageURLS: [URL(string: "https://picsum.photos/400/300")!], bio: "I love dogs and outdoor stuff", age: 33),
-        Person(name: "Stephen", imageURLS: [URL(string: "https://picsum.photos/400/300")!], bio: "I love dogs and outdoor stuff", age: 33),
-        Person(name: "Jimmy", imageURLS: [URL(string: "https://picsum.photos/400/300")!], bio: "I love dogs and outdoor stuff", age: 33),
-        Person(name: "Jungsuk", imageURLS: [URL(string: "https://picsum.photos/400/300")!], bio: "I love dogs and outdoor stuff", age: 33),
-        Person(name: "Sean", imageURLS: [URL(string: "https://picsum.photos/400/300")!], bio: "I love dogs and outdoor stuff", age: 33),
-        Person(name: "Miller", imageURLS: [URL(string: "https://picsum.photos/400/300")!], bio: "I love dogs and outdoor stuff", age: 33),
-        Person(name: "Paul", imageURLS: [URL(string: "https://picsum.photos/400/300")!], bio: "I love dogs and outdoor stuff", age: 33),
-        Person(name: "Linda", imageURLS: [URL(string: "https://picsum.photos/400/300")!], bio: "I love dogs and outdoor stuff", age: 33)
-    ]
+    static let example: Person = Person(name: "John Doe",
+                                         imageURLS: (1...5).map{ i in URL(string: "https://picsum.photos/400/\(300 + i)")!},
+                                        bio: exampleBios.randomElement()!,
+                                         age: 34,
+                                         jobTitle: "Sushi chef",
+                                         school: "University of Miami",
+                                         distance: 30,
+                                         vaccinated: true)
+    static let example2: Person = Person(name: "Hannah",
+                                         imageURLS: (1...7).map{ _ in URL(string: "https://picsum.photos/400/300")!},
+                                         bio: "I love the out door stuff.",
+                                         age: 34,
+                                         jobTitle: "Sushi chef",
+                                         distance: 30,
+                                         vaccinated: true)
+    static let exampleNames =  ["Jake Peralta", "Amy Santiago", "Rosa Diaz", "Terry Jeffords", "Ray Holt", "Gina Linetti", "Charles Boyle", "Hitchcock", "Scully", "Kevin"]
+    static let exampleBios = ["Love the outdoors and long walks on the beach.",
+                              "Avid reader and amateur pianist.", "Love to travel and experience new cultures.",
+                              "Globe-trotter and photography enthusiast. Loves dogs, modern jazz, and spontaneous road trips. Seeking a partner in crime to explore uncharted territories and enjoy life's little moments.",
+                              "Outdoor enthusiast and book lover with a knack for cooking. My day job involves cracking codes as a software engineer, but when I’m not in front of a computer, you’ll find me exploring hiking trails, trying out new recipes, or lost in a good book. I appreciate a good sense of humor and love interesting conversations. Let's see where a swipe right takes us!"]
+    
+    static let examples: [Person] = (0..<20).map{i in
+    
+        return Person(name: exampleNames.randomElement()!,
+               imageURLS: (1...Int.random(in: 3...9)).map{ j in
+            URL(string: "https://picsum.photos/400/\(300 + j)")!
+        },
+               bio: exampleBios.randomElement()!,
+               age: Int.random(in: 18...80),
+               jobTitle: ["Software Engineer", "Data Scientist", "Product Manager", "Designer", "Sushi Chef"][i%5],
+               school: ["MIT", "Stanford", "Harvard", "Yale"][i%4],
+               distance: Int.random(in: 1...1000),
+               vaccinated: Bool.random())
+    }
 }
 
 
 struct User {
     let name: String
+    var age: Int
     let goldSubscription: Bool
 }
 
 extension User {
-    static let example = User(name: "Kevin", goldSubscription: false)
-    static let example2 = User(name: "Julliana", goldSubscription: true)
+    static let example = User(name: "Kevin",age: 26, goldSubscription: false)
+    static let example2 = User(name: "Julliana",age: 54, goldSubscription: true)
 }
 
 

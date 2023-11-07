@@ -8,10 +8,12 @@
 import SwiftUI
 
 struct ContentView: View {
-    var appState = AppStateManager()
+    @StateObject var appState = AppStateManager()
+    @StateObject var userMng = UserViewModel()
     var body: some View {
         MainView()
             .environmentObject(appState)
+            .environmentObject(userMng)
     }
 }
 
